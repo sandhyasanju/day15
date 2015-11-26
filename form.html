@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+  <title>Quote Form</title>
+  <meta charset="utf-8">
+  <script src = "jquery-1.11.3.min.js"></script>
+  <script type = "text/javascript" src = "form.js"></script>
+  <link rel = "stylesheet" type="text/css" href="hyphen.css">
+  <link rel = "stylesheet" type="text/css" href="form.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- header -->
+  <div class = "grid">
+    <div class = "grid__item grid__item--5">
+      <span class = "span"></span>
+    </div>
+    <div class = "grid__item grid__item--3">
+      <h2>CREATE QUOTE</h2>
+    </div>
+  </div>
+<!-- section view-->
+<div id = "section">
+  <div class = "section1">
+  <div class = "grid">
+    <div class = "grid__item grid__item--1">
+      <span class = "span"></span>
+      </div>
+    <div class = "grid__item grid__item--2">
+      <button class = "btn btn--secondary btn--tiny btn--round" id = "button1">Section (1 of 2)</button>
+    </div>
+  </div>
+  <!-- table view-->
+
+   <div class = "grid">
+     <div class = "grid__item grid__item--12">
+       <table class = "table table--bordered">
+         <thead>
+           <tr>
+             <th><label class = "label1"><center>Quote Details</center></label></th>
+             <th><label class = "label1"><center>Delivery Details<i class="fa fa-cart-arrow-down"></i></center></label></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--2">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--6">
+                   <label class = "label">Quote Name</label>
+                   <input type = "text" class = "input" placeholder="Quote name">
+                 </div>
+               </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--2">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--8">
+                   <label class = "label">Customer Name<sup>*</sup></label>
+                   <div class = "input-icon input-icon--right">
+                     <i class="fa fa-pencil input-icon__icon"></i>
+                     <input type = "input" class = "input input-icon__input" placeholder="Customer Name">
+                   </div>
+                 </div>
+               </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--2">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--4">
+                   <label class = "label">Customer Id<sup>*</sup>(unique id)</label>
+                   <div class = "input-icon input-icon--right">
+                     <i class="fa fa-lock input-icon__icon"></i>
+                     <input type = "input" class = "input input-icon__input" placeholder="C123456">
+                   </div>
+                 </div>
+               </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--2">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--2">
+                   <label class = "label">Contact No<sup>*</sup></label>
+                   <select class = "input">
+                     <option value = "1">---select---</option>
+                     <option value = "2">+91</option>
+                   </select>
+                 </div>
+                 <br>
+                 <div class = "grid__item grid__item--4">
+                     <div class = "input-icon input-icon--right">
+                       <i class="fa fa-phone input-icon__icon" id = "phone"></i>
+                       <input class = "input input-icon__input" placeholder="mobile no">
+                     </div>
+                   </div>
+               </div>
+             </td>
+             <td>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--3">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--6">
+                   <label class = "label">Delivery Goods<sub> to</sub><sup>*</sup><i class="fa fa-location-arrow" id = "arrow"></i></label>
+                   <textarea type = "input" class = "input">
+                   </textarea>
+                 </div>
+               </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--3">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--6">
+                   <label class = "label">Billing <sub>to</sub><sup>*</sup></label>
+                   <div class = "input-icon input-icon--right">
+                     <i class="fa fa-pencil-square-o input-icon__icon"></i>
+                     <textarea type = "input" class = "input input-icon__input">
+                     </textarea>
+                   </div>
+                 </div>
+               </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--3">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--6">
+                   <label class = "label">Adress verified <input type = "checkbox" id = "check"></label>
+                 </div>
+               </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--3">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--6">
+                   <label class = "label">Order Type<sup>*</sup></label>
+                   <select class = "input">
+                     <option value = "1">---select---</option>
+                     <option value = "2">Door Delivery</option>
+                     <option value = "3">Spped Delivery</option>
+                     <option value = "4">Postal Delivery</option>
+                     <option value = "5">Courier Delivery</option>
+                   </select>
+                 </div>
+               </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class = "grid">
+    <div class = "grid__item grid__item--11">
+      <span class = "span"></span>
+    </div>
+    <div class = "grid__item grid__item--1">
+      <button class = "btn btn--primary btn--default" id = "button2">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- section 2-->
+<div class = "section2">
+<div class = "grid">
+  <div class = "grid__item grid__item--1">
+    <span class = "span"></span>
+    </div>
+  <div class = "grid__item grid__item--2">
+    <button class = "btn btn--secondary btn--tiny btn--round" id = "button3">Section (2 of 2)</button>
+  </div>
+</div>
+
+
+<!-- table view-->
+
+ <div class = "grid">
+
+   <div class ="grid__item grid__item--11">
+     <table class = "table table--bordered">
+       <thead>
+         <tr>
+           <th><label class = "label1"><center>Additional Information</center></label></th>
+           <th><label class = "label1"><center>Note To(optional)<i class="fa fa-pencil-square-o"></i></center></label></th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>
+             <div class = "grid">
+               <div class = "grid__item grid__item--3">
+                 <span class = "span"></span>
+               </div>
+               <div class = "grid__item grid__item--5">
+                 <label class = "label">Payment Type<i class="fa fa-credit-card" id = "card"></i></label>
+                 <select class = "input">
+                   <option value = "1">---select---</option>
+                   <option value = "2">visa card</option>
+                   <option value = "3">master card</option>
+                   <option value = "4">debit card</option>
+                   <option value = "5">credit card</option>
+                   <option value = "6">Cash on delivery</option>
+                 </select>
+               </div>
+             </div>
+             <div class = "grid">
+               <div class = "grid__item grid__item--3">
+                 <span class = "span"></span>
+               </div>
+               <div class = "grid__item grid__item--5">
+                 <label class = "label">PO Number</label>
+                 <input type = "input" class = "input" placeholder="PO NUMBER">
+               </div>
+             </div>
+             <div class = "grid">
+               <div class = "grid__item grid__item--3">
+                 <span class = "span"></span>
+               </div>
+               <div class = "grid__item grid__item--7">
+                 <label class = "label">Expected Delivery Date</label>
+                 <i class="fa fa-calendar" id = "calendar"></i>
+               </div>
+             </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--3">
+                   <span class = "span"></span>
+                 </div>
+                 <div class = "grid__item grid__item--2">
+                 <select class = "input">
+                   <option value = "1">Day</option>
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+                   <option>6</option>
+                   <option>7</option>
+                   <option>8</option>
+                   <option>9</option>
+                   <option>10</option>
+                   <option>11</option>
+                   <option>12</option>
+                   <option>13</option>
+                   <option>14</option>
+                   <option>15</option>
+                   <option>16</option>
+                   <option>17</option>
+                   <option>18</option>
+                   <option>19</option>
+                   <option>20</option>
+                   <option>21</option>
+                   <option>22</option>
+                   <option>23</option>
+                   <option>24</option>
+                   <option>25</option>
+                   <option>26</option>
+                   <option>27</option>
+                   <option>28</option>
+                   <option>29</option>
+                   <option>30</option>
+                   <option>31</option>
+                 </select>
+               </div>
+               <div class = "grid__item grid__item--3">
+                 <select class = "input">
+                   <option value = "1">Month</option>
+                   <option>January</option>
+                   <option>Febraury</option>
+                   <option>March</option>
+                   <option>April</option>
+                   <option>May</option>
+                   <option>June</option>
+                   <option>July</option>
+                   <option>August</option>
+                   <option>September</option>
+                   <option>October</option>
+                   <option>November</option>
+                   <option>December</option>
+                 </select>
+               </div>
+               <div class = "grid__item grid__item--2">
+                 <input class = "input" placeholder="year">
+               </div>
+             </div>
+             <div class = "grid">
+               <div class = "grid__item grid__item--3">
+                 <span class = "span"></span>
+               </div>
+               <div class = "grid__item grid__item--7">
+                 <label class = "label">Requested Delivery Date</label>
+                 <i class="fa fa-calendar" id = "calendar1"></i>
+               </div>
+             </div>
+             <div class = "grid">
+               <div class = "grid__item grid__item--3">
+                 <span class = "span"></span>
+               </div>
+               <div class = "grid__item grid__item--2">
+                 <select class = "input">
+                   <option value = "1">Day</option>
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+                   <option>6</option>
+                   <option>7</option>
+                   <option>8</option>
+                   <option>9</option>
+                   <option>10</option>
+                   <option>11</option>
+                   <option>12</option>
+                   <option>13</option>
+                   <option>14</option>
+                   <option>15</option>
+                   <option>16</option>
+                   <option>17</option>
+                   <option>18</option>
+                   <option>19</option>
+                   <option>20</option>
+                   <option>21</option>
+                   <option>22</option>
+                   <option>23</option>
+                   <option>24</option>
+                   <option>25</option>
+                   <option>26</option>
+                   <option>27</option>
+                   <option>28</option>
+                   <option>29</option>
+                   <option>30</option>
+                   <option>31</option>
+                 </select>
+               </div>
+               <div class = "grid__item grid__item--3">
+                 <select class = "input">
+                   <option value = "1">Month</option>
+                   <option>January</option>
+                   <option>Febraury</option>
+                   <option>March</option>
+                   <option>April</option>
+                   <option>May</option>
+                   <option>June</option>
+                   <option>July</option>
+                   <option>August</option>
+                   <option>September</option>
+                   <option>October</option>
+                   <option>November</option>
+                   <option>December</option>
+                 </select>
+               </div>
+               <div class = "grid__item grid__item--2">
+                 <input class = "input" placeholder="year">
+               </div>
+             </div>
+           </td>
+           <td width = "50%">
+
+             <div class = "grid">
+               <div class = "grid__item grid__item--4">
+                 <span class = "span"></span>
+               </div>
+               <div class = "grid__item grid__item--6">
+                 <label class = "label">Customer<i class="fa fa-user" id = "user"></i></label>
+                 <textarea class = "input" placeholder="customer">
+                 </textarea>
+               </div>
+             </div>
+               <div class = "grid">
+                 <div class = "grid__item grid__item--4">
+                   <span class = "span"></span>
+                 </div>
+               <div class = "grid__item grid__item--6">
+                  <label class = "label">Office<i class="fa fa-building-o" id = "office"></i></label>
+                 <textarea class = "input" placeholder="office">
+                 </textarea>
+               </div>
+             </div>
+             <div class = "grid">
+               <div class = "grid__item grid__item--4">
+                 <span class = "span"></span>
+               </div>
+               <div class = "grid__item grid__item--6">
+                 <label class = "label">Carrier<i class="fa fa-cart-plus" id = "carrier"></i></label>
+                 <textarea placeholder="carrier" class = "input" >
+                 </textarea>
+               </div>
+             </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class = "grid">
+  <div class = "grid__item grid__item--1">
+    <span class = "span"></span>
+  </div>
+  <div class = "grid__item grid__item--1">
+    <button class = "btn btn--primary btn--default" id = "button4">Back</button>
+  </div>
+  <div class = "grid__item grid__item--8">
+    <span class = "span"></span>
+  </div>
+  <div class = "grid__item grid__item--1">
+    <button class = "btn btn--tertiary btn--default" id = "button5">cancel</button>
+  </div>
+  <div class = "grid__item grid__item--1">
+    <button class = "btn btn--success btn--default btn--rnd" id = "button6">Save</button>
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
